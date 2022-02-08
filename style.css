@@ -6,167 +6,272 @@
     padding: 0%;
     box-sizing: border-box;
 }
-html{
+/* ####### html styling#########$$$$$$$$ */
+:root{
     font-size: 62.5%;
 }
+
 body{
     font-family: 'Montserrat', sans-serif;
-
 }
-
-
 ul li{
     list-style: none;
-    font-size: 2rem;   
 }
-
-
- a{
+a{
+    font-size: 1.6rem;
     text-decoration: none;
-    padding: .75em;
-    text-transform: uppercase;
+}
+p, li{
+    font-size: 1.6 rem ;
+    margin-bottom: 0.5em ;
+    letter-spacing: 0.15em;
+}
+h1,h2,h3{
+    margin-bottom: 00.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
 }
 
 
 
-.header{
-    /* position: relative; */
-    height: 95vh;
-    background: url('pexels-cottonbro-3738095.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
- 
-.header .logo, .header .navbar a{
-color: white;
-}
 
 
-.header .navbar .logo{
-    float: left;
-    border-radius: 60rem;
+
+
+
+
+
+
+
+
+/* ___----------------------utility class-------- */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 
 }
-.header .navbar .nav-items{
-    float:right; 
-
-}
-.navbar::after{
-    content: '';
-    display:block;
-    clear: both;
-}
-.header .navbar .nav-item{
-    display: inline-block;
-}
-
-
-
-.header .navbar a:visited{
-    color: skyblue
-    
-}
-.header .navbar a:hover{
-    text-decoration: underline;
-    color: skyblue;
-}
-
-
- 
-
-/* ############# utility class############### */
 .lg-heading{
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 .md-heading{
-    font-size: 2.2em;
+    font-size: 2.2rem;
 }
 .text-red{
     color: #e63946;
 }
 .text-light{
     color: #f4f4f4;
-
 }
 .text-black{
-    color: black;
+    color: #333;
 }
 .text-grey{
-    color: #a7adba;
+    color: #555 ;
 }
 .btn{
     display: inline-block;
-    padding: 1.5em;
+    padding: 0.5em 1.5em;
     font-weight: 500;
-    text-transform: uppercase ;
-    margin: 0.5em 0;
+    text-transform: uppercase;
+    margin: 00.5em 0;
 
 }
 .btn-primary{
-    background-color: black;
+    background-color: white;
     border-radius: 10em;
 }
-
-
-
-
-p, li{
-    font-size: 1.6rem;
-    /* margin-bottom: 0.5em; */
-    letter-spacing: 0.15em;
-    padding-top: 1.5em;
-    
-}
-h1, h2, h3
-{
-    /* margin-bottom: 2.5em; */
-    letter-spacing: 0.15em;
-    font-weight: 500;
-    /* margin-top: 0.5em; */
-    padding-top: 1.5em;
+.btn-primary:hover{
+    background-color: rgba(0, 0, 0, 0.199);
 
 }
-/* ############################### container ############## */
-.container{
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+.btn-secondary{ 
+    border: 2px solid red;
+    border-radius: 1.5em;
+    color: #e63946;
+    background: #fff;
+
 }
-h6{
-    color: white;
-    font-size: 2.5em;
-    padding-top: 2.5em;
-    display: inline-block;
-    
+.btn-secondary:hover{ 
+    background-color: #fcf3f2;
 }
-/* ############ header content style ################## */
-.header-content{
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------header styling-------------  */
+
+.header{
     position: relative;
-  
-    top: 71%;
+    height: 95vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./img/pexels-cottonbro-3738095.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+.navbar{
+    /* border: 2px solid white; */
+    padding: 1rem;
+}
+
+
+
+.header .navbar .logo{
+    float: left;
+    
+}
+.header .navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+   
+    
+}
+.header .navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.header .navbar a:link{
+    color: white;
+}
+.header .navbar a:visited{
+    color: white;
+}
+.header .navbar a:hover{
+    border-bottom:  4px solid rgb(224, 13, 13);
+}
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/* -----------Header Content----------------- */
+.header-content{
+    position: absolute;
+    
+    top: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    margin-top: 36%;
-    
-   
-
+    /* background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)); */
 }
 .header-content h1{
-    
     text-transform: uppercase;
-    font-weight: 700;
-
+font-weight: 700;
 }
 .header-content p{
     text-transform: uppercase;
 }
-div .container{
-    display: inline;
+
+/* #=============SHOWCASE SECTION STYLING=========== */
+.showcase{
+    background: #ddd;
+    padding: 10rem 0;
 }
-nav .navbar{
-    display: block;
-    position: relative;
+.row{
+    height: 350px;
+    /* border: #e63946 2px solid; */
+    background-color: #fff;
+    box-shadow: 5px 5px 20px 0px #aaa ;
+}
+.row1{
+    margin-bottom: 10rem;
 
 }
+.row1 .img-box, .row2 .text-box{
+    float: left;
+    width: 50%;
+}
+
+
+.row1 .text-box,.row2 .img-box{
+    float: right;
+    width: 50%;
+} 
+.row .img-box{
+    /* border: 7px solid green; */
+    height: 100%;
+    
+
+}
+.row .text-box{
+    /* border: #e63946 solid 2px; */
+    padding: 1rem
+} 
+.row .img-box img{
+    
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1rem;
+    
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.row p{
+    font-size: 1.6rem ;
+}
+/* _------------------Features Section Styling----------- */
+.features{
+    padding: 10rem 0;
+}
+.box-wrapper{
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.336);
+   
+}
+.box{
+    width: 33.333333333%;
+    float: left;
+    border:1px solid black;
+    padding: 2rem;
+    text-align: center;
+}
+.box1, .box3{
+    background-color: #263238;
+    color: white;
+}
+.box2{
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+.box-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
