@@ -116,7 +116,7 @@ h1,h2,h3{
 .header{
     position: relative;
     height: 95vh;
-    background:url("./abcd.jpg");
+    background:url("./abcd.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: none;
